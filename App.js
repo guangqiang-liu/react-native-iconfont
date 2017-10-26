@@ -1,39 +1,37 @@
 /**
- * Sample React Native App
- * https://github.com/facebook/react-native
- * @flow
+ * IconFontDemo
+ * 作者Git：https://github.com/guangqiang-liu
+ * 技术交流群：620792950
+ * 作者QQ：1126756952
+ * @guangqiang
  */
 
-import React, { Component } from 'react';
+import React, { Component } from 'react'
 import {
-  Platform,
   StyleSheet,
   Text,
   View
-} from 'react-native';
+} from 'react-native'
 
-const instructions = Platform.select({
-  ios: 'Press Cmd+R to reload,\n' +
-    'Cmd+D or shake for dev menu',
-  android: 'Double tap R on your keyboard to reload,\n' +
-    'Shake or press menu button for dev menu',
-});
-
+import {Icon} from './icon'
 export default class App extends Component<{}> {
   render() {
     return (
       <View style={styles.container}>
-        <Text style={styles.welcome}>
-          Welcome to React Native!
-        </Text>
-        <Text style={styles.instructions}>
-          To get started, edit App.js
-        </Text>
-        <Text style={styles.instructions}>
-          {instructions}
-        </Text>
+        <Text>react-native-vector-icons 组件库中的字体库</Text>
+        <View style={{height: 100, alignItems: 'center', justifyContent: 'space-around'}}>
+          <Icon name={'fontAwesome|rocket'} size={20} color={'red'}/>
+          <Icon name={'fontAwesome|facebook'} size={20} color={'orange'}/>
+        </View>
+        <Text>自定义的字体库</Text>
+        <View style={{height: 200, alignItems: 'center', justifyContent: 'space-around'}}>
+          <Icon name={'oneIcon|like_o'} size={20} color={'#dad'}/>
+          <Icon name={'oneIcon|horn_playing_o'} size={20} color={'green'}/>
+          <Icon name={'oneIcon|horn_paused_o'} size={20} color={'blue'}/>
+          <Icon name={'oneIcon|nav_back_o'} size={20} color={'black'}/>
+        </View>
       </View>
-    );
+    )
   }
 }
 
@@ -43,15 +41,5 @@ const styles = StyleSheet.create({
     justifyContent: 'center',
     alignItems: 'center',
     backgroundColor: '#F5FCFF',
-  },
-  welcome: {
-    fontSize: 20,
-    textAlign: 'center',
-    margin: 10,
-  },
-  instructions: {
-    textAlign: 'center',
-    color: '#333333',
-    marginBottom: 5,
-  },
-});
+  }
+})
