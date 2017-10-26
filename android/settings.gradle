@@ -1,0 +1,3 @@
+rootProject.name = 'IconFontDemo'
+
+include ':app'
