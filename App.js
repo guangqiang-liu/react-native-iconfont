@@ -19,12 +19,12 @@ export default class App extends Component<{}> {
     return (
       <View style={styles.container}>
         <Text>react-native-vector-icons 组件库中的字体库</Text>
-        <View style={{height: 100, alignItems: 'center', justifyContent: 'space-around'}}>
+        <View style={{height: 100, alignItems: 'center', justifyContent: 'space-around', borderWidth: 1, borderColor: 'red', width: 200}}>
           <Icon name={'fontAwesome|rocket'} size={20} color={'red'}/>
           <Icon name={'fontAwesome|facebook'} size={20} color={'orange'}/>
         </View>
-        <Text>自定义的字体库</Text>
-        <View style={{height: 200, alignItems: 'center', justifyContent: 'space-around'}}>
+        <Text style={{marginTop: 20}}>自定义的字体库</Text>
+        <View style={{height: 200, alignItems: 'center', justifyContent: 'space-around', borderWidth: 1, borderColor: 'red', width: 200}}>
           <Icon name={'oneIcon|like_o'} size={20} color={'#dad'}/>
           <Icon name={'oneIcon|horn_playing_o'} size={20} color={'green'}/>
           <Icon name={'oneIcon|horn_paused_o'} size={20} color={'blue'}/>
